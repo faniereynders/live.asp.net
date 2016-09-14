@@ -15,11 +15,11 @@ using Microsoft.Extensions.Options;
 namespace live.asp.net.Controllers
 {
     [Route("/admin")]
-    [Authorize("Admin")]
+    [Authorize]
     public class AdminController : Controller
     {
-        private const string PST = "Pacific Standard Time";
-        private static readonly TimeZoneInfo _pstTimeZone = TimeZoneInfo.FindSystemTimeZoneById(PST);
+        private const string CET = "Central European Time";
+        private static readonly TimeZoneInfo _pstTimeZone = TimeZoneInfo.FindSystemTimeZoneById(CET);
         private static readonly TimeSpan _pstOffset = _pstTimeZone.BaseUtcOffset;
         private readonly ILiveShowDetailsService _liveShowDetails;
         private readonly IMemoryCache _memoryCache;
