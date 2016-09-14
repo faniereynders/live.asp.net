@@ -44,7 +44,7 @@
                              data-utc-day="@Model.NextShowDateUtc.Value.Day"
                              data-utc-hour="@Model.NextShowDateUtc.Value.Hour"
                              data-utc-min="@Model.NextShowDateUtc.Value.Minute">
-                            <h2>Next Episode Streaming Live on</h2>
+                            <h2>Volgende cast streamen live op</h2>
                             <h2>
                                 <strong data-part="showTime" class="hidden">
                                     @Model.NextShowDateUtc.Value.ToString("u")
@@ -56,7 +56,7 @@
                         </div>
                         <div class="btn-group">
                             <button id="addToCalendar" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Add to calendar <span class="caret"></span>
+                                Voeg bij kalender <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="addToCalendar">
                                 <li><a asp-action="GetiCal" asp-protocol="https">Download iCalendar (ICS) file</a></li>
@@ -81,7 +81,7 @@
                     else
                     {
                         <h2>Streamen Live elke week</h2>
-                        <p>20:00 PM CET</p>
+                        <p>20:00 PM CEST</p>
                     }
                     <p>Kom terug om te kijken &amp; stellen vragen dan!</p>
                 </div>

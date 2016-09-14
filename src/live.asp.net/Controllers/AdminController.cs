@@ -18,9 +18,9 @@ namespace live.asp.net.Controllers
     [Authorize]
     public class AdminController : Controller
     {
-        private const string CET = "Central European Time";
-        private static readonly TimeZoneInfo _pstTimeZone = TimeZoneInfo.FindSystemTimeZoneById(CET);
-        private static readonly TimeSpan _pstOffset = _pstTimeZone.BaseUtcOffset;
+        private const string CEST = "Central Europe Standard Time";
+        private static readonly TimeZoneInfo _timeZone = TimeZoneInfo.FindSystemTimeZoneById(CEST);
+        private static readonly TimeSpan _timeZoneOffset = _timeZone.BaseUtcOffset;
         private readonly ILiveShowDetailsService _liveShowDetails;
         private readonly IMemoryCache _memoryCache;
         private readonly AppSettings _appSettings;
@@ -85,7 +85,7 @@ namespace live.asp.net.Controllers
             liveShowDetails = new LiveShowDetails();
             liveShowDetails.LiveShowEmbedUrl = model.LiveShowEmbedUrl;
             liveShowDetails.NextShowDateUtc = model.NextShowDatePst.HasValue
-                ? TimeZoneInfo.ConvertTime(model.NextShowDatePst.Value, _pstTimeZone, TimeZoneInfo.Utc)
+                ? TimeZoneInfo.ConvertTime(model.NextShowDatePst.Value, _timeZone, TimeZoneInfo.Utc)
                 : (DateTime?)null;
             liveShowDetails.AdminMessage = model.AdminMessage;
 
@@ -114,7 +114,7 @@ namespace live.asp.net.Controllers
                 var nextShowDatePst = TimeZoneInfo.ConvertTime(
                     liveShowDetails.NextShowDateUtc.Value,
                     TimeZoneInfo.Utc,
-                    _pstTimeZone);
+                    _timeZone);
                 model.NextShowDatePst = nextShowDatePst;
             }
             model.AdminMessage = liveShowDetails?.AdminMessage;
