@@ -79,12 +79,12 @@ namespace live.asp.net.Formatters
                 "BEGIN:VCALENDAR\r\n" +
                 "VERSION:2.0\r\n" +
                 "BEGIN:VEVENT\r\n" +
-                "UID:aspnet@microsoft.com\r\n" +
+                "UID:sdncast@sdn.nl\r\n" +
                 "DTSTART:" + nextShowDateUtc?.ToString(_dateTimeFormat) + "\r\n" +
                 "DTEND:" + nextShowDateUtc?.AddMinutes(30).ToString(_dateTimeFormat) + "\r\n" +
-                "SUMMARY:ASP.NET Community Standup\r\n" +
+                "SUMMARY:SDN CAST\r\n" +
                 "DESCRIPTION:\r\n" +
-                "LOCATION:https://live.asp.net/\r\n" +
+                "LOCATION:https://www.sdncast.nl/\r\n" +
                 "END:VEVENT\r\n" +
                 "END:VCALENDAR\r\n");
         }

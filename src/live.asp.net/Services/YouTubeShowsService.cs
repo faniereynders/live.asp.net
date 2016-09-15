@@ -148,7 +148,7 @@ namespace live.asp.net.Services
                 new Show
                 {
                     ShowDate = new DateTimeOffset(2015, 7, 21, 9, 30, 0, _pdtOffset),
-                    Title = "ASP.NET Community Standup - July 21st 2015",
+                    Title = "SDN Cast - July 21st 2015",
                     Provider = "YouTube",
                     ProviderId = "7O81CAjmOXk",
                     ThumbnailUrl = "http://img.youtube.com/vi/7O81CAjmOXk/mqdefault.jpg",
@@ -157,7 +157,7 @@ namespace live.asp.net.Services
                 new Show
                 {
                     ShowDate = new DateTimeOffset(2015, 7, 14, 15, 30, 0, _pdtOffset),
-                    Title = "ASP.NET Community Standup - July 14th 2015",
+                    Title = "SDN Cast - July 14th 2015",
                     Provider = "YouTube",
                     ProviderId = "bFXseBPGAyQ",
                     ThumbnailUrl = "http://img.youtube.com/vi/bFXseBPGAyQ/mqdefault.jpg",
@@ -167,7 +167,7 @@ namespace live.asp.net.Services
                 new Show
                 {
                     ShowDate = new DateTimeOffset(2015, 7, 7, 15, 30, 0, _pdtOffset),
-                    Title = "ASP.NET Community Standup - July 7th 2015",
+                    Title = "SDN Cast - July 7th 2015",
                     Provider = "YouTube",
                     ProviderId = "APagQ1CIVGA",
                     ThumbnailUrl = "http://img.youtube.com/vi/APagQ1CIVGA/mqdefault.jpg",
@@ -176,7 +176,7 @@ namespace live.asp.net.Services
                 new Show
                 {
                     ShowDate = DateTimeOffset.Now.AddDays(-28),
-                    Title = "ASP.NET Community Standup - July 21st 2015",
+                    Title = "SDN Cast - July 21st 2015",
                     Provider = "YouTube",
                     ProviderId = "7O81CAjmOXk",
                     ThumbnailUrl = "http://img.youtube.com/vi/7O81CAjmOXk/mqdefault.jpg",

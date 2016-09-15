@@ -56,7 +56,7 @@
                         </div>
                         <div class="btn-group">
                             <button id="addToCalendar" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Voeg toe aan kalender <span class="caret"></span>
+                                Voeg aan kalender toe<span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="addToCalendar">
                                 <li><a asp-action="GetiCal" asp-protocol="https">Download iCalendar (ICS) bestand</a></li>
@@ -83,7 +83,7 @@
                         <h2>Wekelijkse Live Stream</h2>
                         <p>20:00 PM CEST</p>
                     }
-                    <p>Kom terug om te kijken &amp; vragen te stellen!</p>
+                    <p>Kom terug om de webcast te bekijken en vragen te stellen!</p>
                 </div>
             }
         </div>
@@ -92,7 +92,7 @@
 
 @if (Model.ShowPreviousShows)
 {
-    <h2>Vorige casts</h2>
+    <h2>Eerder opgenomen SDN Casts</h2>
 
         <div class="row">
             @foreach (var show in Model.PreviousShows)
