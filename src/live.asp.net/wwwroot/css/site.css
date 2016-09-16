@@ -14,6 +14,7 @@ h1, h2, h3, h4, h5, h6 {
     background-size: 920px;
     color: #fff;
     min-height: 350px;
+    background-color: #505C05;
 }
 
 @media (min-width: 920px) {
