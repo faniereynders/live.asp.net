@@ -34,6 +34,7 @@
             else
             {
                 <div class="next-episode text-center">
+
                     @if (Model.NextShowScheduled)
                     {
                         <div id="nextShowDetails"
@@ -85,11 +86,12 @@
                         <h2>Wekelijkse Live Stream</h2>
                         <p>20:00 PM Central Europe Standard Time</p>
                     }
+
                     <p>Kom terug om de webcast te bekijken en vragen te stellen!</p>
 
-                    // https://developers.facebook.com/docs/plugins/like-button
                     <div id="fb-root"></div>
                     <script>
+                        // https://developers.facebook.com/docs/plugins/like-button
                         (function (d, s, id) {
                             var js, fjs = d.getElementsByTagName(s)[0];
                             if (d.getElementById(id)) return;
@@ -99,7 +101,7 @@
                         }(document, 'script', 'facebook-jssdk'));
                     </script>
 
-                    <p>
+                    <p class="text-center">
                         <div class="fb-like" data-href="https://www.facebook.com/SDNCast" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
                     </p>
                 </div>
