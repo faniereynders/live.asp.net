@@ -81,7 +81,7 @@ namespace live.asp.net.Formatters
                 "BEGIN:VEVENT\r\n" +
                 "UID:sdncast@sdn.nl\r\n" +
                 "DTSTART:" + nextShowDateUtc?.ToString(_dateTimeFormat) + "\r\n" +
-                "DTEND:" + nextShowDateUtc?.AddMinutes(30).ToString(_dateTimeFormat) + "\r\n" +
+                "DTEND:" + nextShowDateUtc?.AddMinutes(90).ToString(_dateTimeFormat) + "\r\n" +
                 "SUMMARY:SDN CAST\r\n" +
                 "DESCRIPTION:\r\n" +
                 "LOCATION:https://www.sdncast.nl/\r\n" +

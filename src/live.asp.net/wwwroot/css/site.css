@@ -9,6 +9,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Segoe UI Light', 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif;
 }
 
+table {
+    margin: 0 auto;
+}
+
 .jumbotron {
     background: #505C05 url(home-bg.jpg) top center repeat-x;
     background-size: 920px;
@@ -172,3 +176,4 @@ footer {
         height: 360px;
     }
 }
+
