@@ -37,51 +37,51 @@
 
                     @if (Model.NextShowScheduled)
                     {
-                    <div id="nextShowDetails"
-                         data-utc-year="@Model.NextShowDateUtc.Value.Year"
-                         data-utc-month="@(Model.NextShowDateUtc.Value.Month-1)"
-                         data-utc-day="@Model.NextShowDateUtc.Value.Day"
-                         data-utc-hour="@Model.NextShowDateUtc.Value.Hour"
-                         data-utc-min="@Model.NextShowDateUtc.Value.Minute">
-                        <h2>Volgende cast wordt live gestreamed op</h2>
-                        <h2>
-                            <strong data-part="showTime" class="hidden">
-                                @Model.NextShowDateUtc.Value.ToString("u")
-                            </strong>
-                        </h2>
-                        <h2>
-                            <span data-part="countdown"></span>
-                        </h2>
-                    </div>
-                    <div class="btn-group">
-                        <button id="addToCalendar" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Voeg aan kalender toe<span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="addToCalendar">
-                            <li><a asp-action="GetiCal" asp-protocol="http">Download iCalendar (ICS) bestand</a></li>
-                            <li><a asp-action="GetiCal" asp-protocol="webcals">Voeg toe d.m.v. webcal</a></li>
-                            <li><a href="@Model.AddToGoogleUrl" target="_blank">Voeg toe aan Google Calendar</a></li>
-                        </ul>
-                    </div>
+                        <div id="nextShowDetails"
+                             data-utc-year="@Model.NextShowDateUtc.Value.Year"
+                             data-utc-month="@(Model.NextShowDateUtc.Value.Month-1)"
+                             data-utc-day="@Model.NextShowDateUtc.Value.Day"
+                             data-utc-hour="@Model.NextShowDateUtc.Value.Hour"
+                             data-utc-min="@Model.NextShowDateUtc.Value.Minute">
+                            <h2>Volgende cast wordt live gestreamed op</h2>
+                            <h2>
+                                <strong data-part="showTime" class="hidden">
+                                    @Model.NextShowDateUtc.Value.ToString("u")
+                                </strong>
+                            </h2>
+                            <h2>
+                                <span data-part="countdown"></span>
+                            </h2>
+                        </div>
+                        <div class="btn-group">
+                            <button id="addToCalendar" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Voeg aan kalender toe<span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-left" aria-labelledby="addToCalendar">
+                                <li><a asp-action="GetiCal" asp-protocol="http">Download iCalendar (ICS) bestand</a></li>
+                                <li><a asp-action="GetiCal" asp-protocol="webcals">Voeg toe d.m.v. webcal</a></li>
+                                <li><a href="@Model.AddToGoogleUrl" target="_blank">Voeg toe aan Google Calendar</a></li>
+                            </ul>
+                        </div>
 
-                    <cache>
-                        <environment names="Development">
-                            <script src="~/js/site.js" inline="true"></script>
-                        </environment>
-                        <environment names="Staging,Production">
-                            <script src="~/js/site.min.js" inline="true"></script>
-                        </environment>
-                    </cache>
-                    <script>
+                        <cache>
+                            <environment names="Development">
+                                <script src="~/js/site.js" inline="true"></script>
+                            </environment>
+                            <environment names="Staging,Production">
+                                <script src="~/js/site.min.js" inline="true"></script>
+                            </environment>
+                        </cache>
+                        <script>
                             (function () {
                                 window.siteJs.setNextShowDetails("nextShowDetails");
                             })();
-                    </script>
+                        </script>
                     }
                     else
                     {
-                    <h2>Wekelijkse Live Stream</h2>
-                    <p>20:00 PM Central Europe Standard Time</p>
+                        <h2>Wekelijkse Live Stream</h2>
+                        <p>20:00 PM Central Europe Standard Time</p>
                     }
 
                     <p>Kom terug om de webcast te bekijken en vragen te stellen!</p>
@@ -117,17 +117,10 @@
                                     <img src="~/images/Camtasia-icon1024.png" width="32" height="32" /><br>
                                     Supported by Camtasia (TechSmith)
                                 </a>
-
-                            <p>
-
-
-                        </td>
-
-                    </tr>
-
-                </table>
-
-            </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             }
         </div>
     </div>
